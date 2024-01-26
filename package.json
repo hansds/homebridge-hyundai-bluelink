@@ -2,7 +2,7 @@
   "private": false,
   "displayName": "Homebridge Hyundai BlueLink",
   "name": "homebridge-hyundai-bluelink-next",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "description": "Integrates with remote functionality for Hyundai cars.",
   "license": "Apache-2.0",
   "repository": {
@@ -32,7 +32,6 @@
     "homebridge-plugin"
   ],
   "dependencies": {
-    "bluelinky-next": "^8.2.1",
     "bluelinky": "npm:bluelinky-next@^8.2.1"
   },
   "devDependencies": {
