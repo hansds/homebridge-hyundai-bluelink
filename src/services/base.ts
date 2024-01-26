@@ -9,8 +9,8 @@ export abstract class HyundaiService {
   protected readonly accessory: PlatformAccessory = this.va.accessory;
   protected readonly vehicle: Vehicle = this.va.vehicle;
   protected readonly platform: HyundaiPlatform = this.va.platform;
-  protected readonly Characteristic: typeof Characteristic = this.platform
-    .Characteristic;
+  protected readonly Characteristic: typeof Characteristic =
+    this.platform.Characteristic;
   protected readonly log: Logger = this.platform.log;
   protected readonly config: HyundaiConfig = <HyundaiConfig>(
     this.platform.config

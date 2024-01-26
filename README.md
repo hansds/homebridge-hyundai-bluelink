@@ -13,6 +13,7 @@ I no longer use Homebridge/HOOBS, and thus cannot maintain this plugin. Reach ou
 ## Installation
 
 This plugin can be installed from the Homebridge web console:
+
 1. Log in to the console and go to the `Plugins` tab
 2. Search for `Bluelink`, and install `Homebridge Hyundai BlueLink`
 3. Edit the settings in the UI, or directly in the `config.json` file following the schema below
@@ -50,10 +51,11 @@ This plugin can be installed from the Homebridge web console:
 ```
 
 ### Notes
-* `vehicles.maxRange` is optional
-* `remoteStart.airCtrl` controls whether the HVAC is turned on
-* `remoteStart.airTempvalue` is the temperature in Fahrenheit
-* `remoteStart.igniOnDuration` must be between 1 and 10, otherwise remote start will fail
+
+- `vehicles.maxRange` is optional
+- `remoteStart.airCtrl` controls whether the HVAC is turned on
+- `remoteStart.airTempvalue` is the temperature in Fahrenheit
+- `remoteStart.igniOnDuration` must be between 1 and 10, otherwise remote start will fail
 
 ## Known Issues
 
@@ -74,3 +76,7 @@ Source: https://github.com/FreshRSS/FreshRSS/issues/3029
 ### Status Refresh Delay
 
 Due to Hyundai's [API Rate Limits](https://github.com/Hacksore/bluelinky/wiki/API-Rate-Limits), the car status (locked, on/off, range) is only updated once per hour. Actions taken from homebridge get automatically refreshed, but actions taken elsewhere (e.g. bluelink app, key fab) may not display in homebridge for up to an hour.
+
+### Device id resets
+
+Due to a known [issue](https://github.com/Hyundai-Kia-Connect/kia_uvo/issues/672) of the device id changing after each write request, I'm using a [patched version of bluelinky](https://github.com/hansds/bluelinky).
